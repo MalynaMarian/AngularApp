@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyComponent implements OnInit {
 
-  constructor() { }
+  defaultDisable = false;
+  constructor() {
+    setTimeout(() => {
+      this.defaultDisable = true;
+    }, 2000);
+   }
 
   ngOnInit() {
   }
