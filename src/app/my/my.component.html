@@ -1,4 +1,33 @@
-<p class="subtitle">
-  First component works!
-</p>
-<a class="button is-info" disabled>My Info</a>
+<div class="container">
+  <div class="notification">
+    <p class="subtitle">
+      First component works!
+    </p>
+  </div>
+
+  <div class="columns">
+    <div class="column">
+      <a class="button is-info" (click)="addMyInfo()">My Info</a>
+      <p>{{myInfo}}</p>
+    </div>
+    <div class="column">
+      <input class="input" type="text" placeholder="Text input" (keyup.enter)="onKeyUp($event)">
+      <p>{{inputText}}</p>
+    </div>
+    <div class="column">
+      <div class="field has-addons">
+        <div class="control">
+          <input class="input" type="text" placeholder="Find a repository" #inpText>
+        </div>
+        <div class="control">
+          <a class="button is-info" (click)='addTextRepository(inpText.value)'>
+            Search
+          </a>
+        </div>
+      </div>
+      <p>{{textRepository}}</p>
+    </div>
+  </div>
+</div>
+
+

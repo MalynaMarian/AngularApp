@@ -7,13 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyComponent implements OnInit {
 
-  defaultDisable = false;
+  myInfo = '';
+  inputText = '';
+  textRepository = '';
   constructor() {
-    setTimeout(() => {
-      this.defaultDisable = true;
-    }, 2000);
    }
-
+  addMyInfo() {
+    this.myInfo = 'Hello';
+  }
+  onKeyUp(event: Event) {
+    console.log((<HTMLInputElement>event.target).value);
+    this.inputText = (<HTMLInputElement>event.target).value;
+  }
+  addTextRepository(value) {
+    this.textRepository = value;
+  }
   ngOnInit() {
   }
 
