@@ -7,11 +7,12 @@
 
   <div class="columns">
     <div class="column">
-      <a class="button is-info" (click)="addMyInfo()">My Info</a>
+      <button class="button is-info" (click)="addMyInfo()" [disabled]='!addFlag'>My Info</button>
       <p>{{myInfo}}</p>
     </div>
     <div class="column">
-      <input class="input" type="text" placeholder="Text input" (keyup.enter)="onKeyUp($event)">
+      <input class="input" type="text" placeholder="after press Enter" (keyup.enter)="onKeyUp($event)">
+      <input class="input" type="text" placeholder="New Text" [(ngModel)]='inputText'>
       <p>{{inputText}}</p>
     </div>
     <div class="column">
@@ -29,5 +30,3 @@
     </div>
   </div>
 </div>
-
-

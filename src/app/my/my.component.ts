@@ -6,11 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my.component.scss']
 })
 export class MyComponent implements OnInit {
-
+  addFlag = false;
   myInfo = '';
   inputText = '';
   textRepository = '';
   constructor() {
+    setTimeout(() => {
+      this.addFlag = true;
+    }, 3000);
    }
   addMyInfo() {
     this.myInfo = 'Hello';
