@@ -46,5 +46,5 @@
   <ng-template #successAdd>
     <p >Добавлено імя - ></p>
   </ng-template>
-  <p *ngFor='let name of someNames; let i = index'>{{i+1}}  -  {{name}}</p>
+  <p *ngFor='let name of someNames; let i = index'><span [ngStyle]='{color: (i+1) % 2 === 0 ? "red" : "blue"}' [ngClass]='{"is-size-3": true}'>{{i+1}}  -  {{name}}</span></p>
 </div>
