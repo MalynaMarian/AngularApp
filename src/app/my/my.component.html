@@ -30,3 +30,21 @@
     </div>
   </div>
 </div>
+
+<div class="container">
+  <div class="field has-addons">
+    <div class="control">
+      <input class="input" type="text" placeholder="Add some name" [(ngModel)]='myName'>
+    </div>
+    <div class="control">
+      <a class="button is-info" (click)="getMyName()">
+        Button
+      </a>
+    </div>
+  </div>
+  <p *ngIf='!addMyName; else successAdd'>Імя не добавлено</p>
+  <ng-template #successAdd>
+    <p >Добавлено імя - ></p>
+  </ng-template>
+  <p *ngFor='let name of someNames; let i = index'>{{i+1}}  -  {{name}}</p>
+</div>

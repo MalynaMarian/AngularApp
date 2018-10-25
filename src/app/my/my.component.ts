@@ -10,6 +10,10 @@ export class MyComponent implements OnInit {
   myInfo = '';
   inputText = '';
   textRepository = '';
+
+  myName = '';
+  addMyName = false;
+  someNames = [];
   constructor() {
     setTimeout(() => {
       this.addFlag = true;
@@ -24,6 +28,11 @@ export class MyComponent implements OnInit {
   }
   addTextRepository(value) {
     this.textRepository = value;
+  }
+  getMyName() {
+    this.addMyName = true;
+    this.someNames.push(this.myName);
+    this.myName = '';
   }
   ngOnInit() {
   }
