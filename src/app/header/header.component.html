@@ -10,31 +10,31 @@
 
     <div id="navbarExampleTransparentExample" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item" href="#about">
+        <a class="navbar-item" routerLink="/about">
           <span class="icon">
             <i class="fas fa-info"></i>
           </span>
           <span>About</span>
         </a>
-        <a class="navbar-item" href="#services">
+        <a class="navbar-item" routerLink="#services">
           <span class="icon">
             <i class="fas fa-bars"></i>
           </span>
           <span>Services</span>
         </a>
-        <a class="navbar-item" href="#resume">
+        <a class="navbar-item" routerLink="">
           <span class="icon">
             <i class="fas fa-file-alt"></i>
           </span>
           <span>Resume</span>
         </a>
-        <a class="navbar-item" href="#portfolio">
+        <!-- <a class="navbar-item" routerLink="#portfolio">
           <span class="icon">
             <i class="fas fa-th-list"></i>
           </span>
           <span>Portfolio</span>
-        </a>
-        <a class="navbar-item" href="#contact">
+        </a> -->
+        <a class="navbar-item" routerLink="/contact">
           <span class="icon">
             <i class="fas fa-envelope"></i>
           </span>
@@ -47,12 +47,12 @@
   <!-- Header -->
   <section class="hero is-link is-fullheight is-fullheight-with-navbar">
     <div class="hero-body">
-      <div class="container">Hello! I am
+      <div class="container">Hello! My name is
         <h1 class="title is-1">
-          Minion Tim
+          {{myName}}
         </h1>
         <h2 class="subtitle is-3">
-          Full Stack Web Developer
+          I am {{group}} group's student!
         </h2>
       </div>
     </div>

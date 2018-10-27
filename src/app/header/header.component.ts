@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  myName = 'Malyna Marian';
+  group = 'IF-092.UI';
   constructor() { }
 
   ngOnInit() {
